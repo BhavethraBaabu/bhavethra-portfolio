@@ -10,31 +10,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Theme toggle
-const themeToggleBtn = document.createElement('button');
-themeToggleBtn.innerText = '🌓 Theme';
-themeToggleBtn.classList.add('theme-toggle');
-document.querySelector('header').appendChild(themeToggleBtn);
-
-themeToggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  localStorage.setItem(
-    'theme',
-    document.body.classList.contains('dark-mode') ? 'dark' : 'light'
-  );
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
 });
 
-// Preserve theme on reload
+// Restore saved theme
 if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark-mode');
+  document.body.classList.add('dark');
 }
 
-// Simple fade-in animation for sections
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Fade-in animation
 const sections = document.querySelectorAll('section');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.2 });
 
