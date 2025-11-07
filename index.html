@@ -5,76 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bhavethra Baabu | Cloud & DevOps Engineer</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d04a1d5a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>Bhavethra Baabu</h1>
-    <p>Cloud & DevOps Engineer | AWS | Terraform | Kubernetes | Python</p>
+  <header class="hero">
     <nav>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <h1 class="logo">Bhavethra<span>Baabu</span></h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle">🌓</button>
     </nav>
+
+    <div class="hero-content">
+      <h2>Hi, I'm <span>Bhavethra</span></h2>
+      <h3>Cloud & DevOps Engineer</h3>
+      <p>Automating infrastructure, optimizing cloud solutions, and building scalable DevOps workflows.</p>
+      <div class="hero-buttons">
+        <a href="Bhavethra_resume.pdf" class="btn" download>📄 Download Resume</a>
+        <a href="#contact" class="btn secondary">📬 Contact Me</a>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/BhavethraBaabu" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/bhavethrab24/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>
-      I’m a Cloud and DevOps Engineer with hands-on experience in AWS, Terraform, Jenkins, Docker, and Kubernetes. 
-      I’m passionate about automation, scalable cloud infrastructure, and CI/CD pipelines.
-    </p>
+    <p>I’m a Cloud and DevOps Engineer with hands-on experience across AWS, Terraform, Jenkins, and Kubernetes. 
+    I’m passionate about automation, infrastructure-as-code, and building resilient cloud architectures.</p>
   </section>
 
   <section id="experience">
-    <h2>Professional Experience</h2>
-    <h3>Cloud and DevOps Engineer — LTIMindtree (Jul 2022 – Jul 2024)</h3>
-    <ul>
-      <li>Delivered L2/L3 support for hybrid infrastructure, improving SLA by 45%.</li>
-      <li>Developed Terraform modules to automate provisioning, cutting setup time by 60%.</li>
-      <li>Migrated EC2 jobs to AWS Lambda, reducing costs by 40%.</li>
-      <li>Implemented monitoring with Prometheus & Grafana to reduce downtime by 30%.</li>
-    </ul>
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Cloud and DevOps Engineer — LTIMindtree (2022–2024)</h3>
+      <ul>
+        <li>Delivered L2/L3 support for hybrid infra, improving SLA by 45%.</li>
+        <li>Created Terraform modules and CI/CD workflows for automated provisioning.</li>
+        <li>Migrated EC2 jobs to Lambda, reducing costs by 40%.</li>
+        <li>Implemented monitoring with Prometheus & Grafana, cutting downtime by 30%.</li>
+      </ul>
+    </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-
-    <div class="project">
-      <h3>CogniCode — Brain-Friendly Coding Assistant</h3>
-      <p><strong>Tech Stack:</strong> JavaScript, Node.js, VSCode API, OpenAI GPT</p>
-      <p>Built a GPT-powered VSCode extension for context-aware code suggestions, improving developer productivity by 30%.</p>
-      <a href="https://github.com/BhavethraBaabu" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project">
-      <h3>AccuHours — Automated Data Discrepancy Detection Tool</h3>
-      <p><strong>Tech Stack:</strong> Python, Pandas, SQL, REST APIs, Jenkins</p>
-      <p>Designed a tool to identify discrepancies between time sheets, improving data accuracy by 75%.</p>
-      <a href="https://github.com/BhavethraBaabu" target="_blank">View on GitHub</a>
+    <div class="projects">
+      <div class="card">
+        <h3>CogniCode — Brain-Friendly Coding Assistant</h3>
+        <p>VSCode Extension using GPT API to boost code productivity and enforce quality.</p>
+        <a href="https://github.com/BhavethraBaabu" target="_blank" class="btn">View Project</a>
+      </div>
+      <div class="card">
+        <h3>AccuHours — Automated Data Discrepancy Detection</h3>
+        <p>Python + SQL tool to detect timesheet discrepancies, improving accuracy by 75%.</p>
+        <a href="https://github.com/BhavethraBaabu" target="_blank" class="btn">View Project</a>
+      </div>
     </div>
   </section>
 
   <section id="skills">
-    <h2>Technical Skills</h2>
+    <h2>Skills</h2>
     <div class="skills-grid">
-      <span>AWS</span><span>Azure</span><span>GCP</span>
-      <span>Terraform</span><span>Jenkins</span><span>Docker</span>
-      <span>Kubernetes</span><span>Python</span><span>Git</span>
-      <span>Prometheus</span><span>Grafana</span><span>ServiceNow</span>
+      <span>AWS</span><span>Azure</span><span>Terraform</span><span>Jenkins</span>
+      <span>Docker</span><span>Kubernetes</span><span>Python</span><span>Prometheus</span>
+      <span>Grafana</span><span>GitHub Actions</span><span>Linux</span><span>ServiceNow</span>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:bbaabu@clarku.edu">bbaabu@clarku.edu</a></p>
-    <p><a href="https://linkedin.com/in/bhavethrab24/" target="_blank">LinkedIn</a> |
-       <a href="https://github.com/BhavethraBaabu" target="_blank">GitHub</a></p>
+    <p>Let's collaborate or chat about DevOps!</p>
+    <p><a href="mailto:bbaabu@clarku.edu">bbaabu@clarku.edu</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Bhavethra Baabu</p>
+    <p>© 2025 Bhavethra Baabu | Built with ❤️ using HTML, CSS & JS</p>
   </footer>
 </body>
 </html>
