@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavethra Baabu | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sidebar-w: 280px;
+    --bg: #ffffff;
+    --sidebar-bg: #f5f5f5;
+    --text: #2c2c2c;
+    --muted: #666666;
+    --accent: #4a90d9;      /* Bhavethra's accent — steel blue, distinct from Richa's teal */
+    --border: #e0e0e0;
+    --serif: 'Playfair Display', serif;
+    --sans: 'Quicksand', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    color: var(--text);
+    background: var(--bg);
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ── SIDEBAR ── */
+  #sidebar {
+    width: var(--sidebar-w);
+    min-height: 100vh;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border);
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1.5rem 2rem;
+    z-index: 50;
+    overflow-y: auto;
+  }
+
+  .avatar-wrap {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--border);
+    margin-bottom: 1.25rem;
+    background: #dce8f5;
+    flex-shrink: 0;
+  }
+
+  .avatar-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .sidebar-name {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 0.35rem;
+    line-height: 1.2;
+  }
+
+  .sidebar-role {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  nav ul {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  nav ul li { margin-bottom: 0.15rem; }
+
+  nav ul li a {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.4rem 0;
+    transition: color 0.2s;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active { color: var(--accent); }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
+  }
+
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .social-icons a:hover {
+    opacity: 0.75;
+    transform: translateY(-1px);
+  }
+
+  .social-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* ── MAIN ── */
+  #main {
+    margin-left: var(--sidebar-w);
+    flex: 1;
+    min-height: 100vh;
+  }
+
+  /* ── SECTION SHARED ── */
+  .colorlib-section {
+    padding: 5rem 5rem 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .heading-meta {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+
+  h2.colorlib-heading {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    color: var(--text);
+  }
+
+  /* ── HOME / HERO ── */
+  #home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+    background: var(--bg);
+    position: relative;
+  }
+
+  .hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  .hero-content {
+    flex: 1;
+    max-width: 620px;
+  }
+
+  .hero-image {
+    flex-shrink: 0;
+    width: clamp(260px, 30vw, 360px);
+  }
+
+  .hero-image img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 8px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    max-width: 480px;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .hero-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  /* ── ABOUT ── */
+  #about .about-desc {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.9;
+    max-width: 680px;
+  }
+
+  #about .about-desc p + p { margin-top: 1rem; }
+
+  #about strong { color: var(--text); font-weight: 700; }
+
+  .company-strip {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    flex-wrap: nowrap;
+  }
+
+  .company-logo {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.7rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .company-logo:hover { border-color: var(--accent); color: var(--accent); }
+
+  .company-img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .company-logo .co-icon {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  /* ── PORTFOLIO ── */
+  #portfolio { background: #fafafa; }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+
+  .project-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+  }
+
+  .project-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .project-card:hover::after { opacity: 1; }
+
+  .project-type {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-name {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  .project-sub {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .project-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .ptag {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.55rem;
+    background: #f0f5fb;
+    color: var(--accent);
+    border-radius: 2px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .project-link {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .project-link:hover { border-color: var(--accent); }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--bg); }
+
+  .testimonial-block {
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem 0 1.5rem 2rem;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+  }
+
+  .testimonial-block blockquote {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.85;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+  }
+
+  .testimonial-block cite {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--text);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .testimonial-block cite span {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: #fafafa; }
+
+  .timeline { position: relative; max-width: 720px; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px; top: 8px; bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .timeline-entry { padding: 0 0 3rem 3rem; position: relative; }
+  .timeline-entry:last-child { padding-bottom: 0; }
+
+  .timeline-dot {
+    position: absolute;
+    left: 8px; top: 4px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: var(--bg);
+  }
+
+  .timeline-period {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  .timeline-role {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-company {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .timeline-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .timeline-bullets li {
+    font-size: 0.875rem;
+    color: var(--muted);
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.7;
+  }
+
+  .timeline-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--border);
+    font-size: 0.75rem;
+  }
+
+  /* ── EDUCATION ── */
+  #education { background: var(--bg); }
+
+  .edu-block {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.75rem 2rem;
+    margin-bottom: 1.25rem;
+    max-width: 680px;
+    transition: border-color 0.2s;
+  }
+
+  .edu-block:hover { border-color: var(--accent); }
+
+  .edu-degree {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .edu-school {
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.03em;
+  }
+
+  .edu-detail {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── SKILLS ── */
+  #skills { background: #fafafa; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    max-width: 800px;
+  }
+
+  .skill-group {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.4rem;
+  }
+
+  .skill-group-title {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+  .stag {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.55rem;
+    background: #f0f5fb;
+    color: var(--text);
+    border-radius: 2px;
+    font-weight: 500;
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--bg); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 720px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-icon {
+    font-size: 1.2rem;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .contact-item a, .contact-item p {
+    font-size: 0.875rem;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .contact-item a:hover { color: var(--accent); }
+
+  .opt-note {
+    display: inline-block;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: #edf4ff;
+    color: var(--accent);
+    border: 1px solid #c7dbf5;
+    padding: 0.3rem 0.7rem;
+    border-radius: 2px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    #sidebar { display: none; }
+    #main { margin-left: 0; }
+    .colorlib-section, #home { padding: 3rem 2rem; }
+    .hero-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.5rem;
+    }
+    .hero-image {
+      width: 100%;
+      max-width: 300px;
+      align-self: center;
+    }
+    .company-strip { flex-wrap: wrap; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside id="sidebar">
+  <div class="avatar-wrap">
+    <img src="images/mee.jpeg" alt="Bhavethra Baabu">
+  </div>
+  <div class="sidebar-name">Bhavethra Baabu</div>
+  <div class="sidebar-role">Software Engineer</div>
+
+  <nav>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="social-icons">
+    <a href="https://linkedin.com/in/bhavethrab24" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <img src="images/linkedin.png" alt="LinkedIn" class="social-img">
+    </a>
+    <a href="https://github.com/BhavethraBaabu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <img src="images/github.png" alt="GitHub" class="social-img">
+    </a>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<div id="main">
+
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Open to Software Engineer and Software Development Engineer roles</div>
+        <h1 class="hero-name">Hi,<br>I'm Bhavethra</h1>
+        <p class="hero-sub">
+          A software engineer passionate about building reliable backend systems, cloud-native infrastructure, and AI-powered platforms that ship to production and actually scale.
+        </p>
+        <a href="mailto:bbaabu@clarku.edu" class="hero-btn">Get In Touch</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/mee2.jpeg" alt="Bhavethra Baabu">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="colorlib-section">
+    <span class="heading-meta">About Me</span>
+    <h2 class="colorlib-heading">Who Am I?</h2>
+    <div class="about-desc">
+		<p>
+			<strong>Hi, I'm Bhavethra —</strong> a software engineer who builds software that scales, from enterprise infrastructure to AI-powered products. My work spans backend engineering, cloud-native systems, full-stack development, and intelligent applications powered by modern AI.
+		  </p>
+		
+		  <p>
+			With professional experience at LTIMindtree and SciQuel, I've contributed to mission-critical enterprise platforms, deployment automation, observability systems, secure backend services, and large-scale web applications. I focus on building reliable, production-ready systems that deliver measurable impact and exceptional user experiences.
+		  </p>
+		
+		  <p>
+			Beyond professional work, I enjoy developing AI-driven products such as <strong>CampusPulse</strong>, a university-wide RAG-powered assistant, and <strong>CoinPulse</strong>, a real-time financial intelligence platform. These projects reflect my passion for leveraging Large Language Models, Retrieval-Augmented Generation (RAG), vector databases, and cloud-native architectures to solve real-world problems.
+		  </p>
+		
+		  <p>
+			Currently pursuing my <strong>Master of Science in Computer Science at Clark University</strong>, I am actively seeking opportunities as a <strong>Software Engineer, Backend Engineer, Full-Stack Engineer, or AI Engineer</strong>, where I can contribute to building scalable software, intelligent systems, and impactful products used by people worldwide.
+		  </p>
+
+    </div>
+
+    <div class="company-strip">
+      <div class="company-logo">
+        <img src="images/ltimindtree.png" alt="LTIMindtree" class="company-img">
+        <span>LTIMindtree</span>
+      </div>
+      <div class="company-logo">
+        <img src="images/sciquel.jpeg" alt="SciQuel" class="company-img">
+        <span>SciQuel</span>
+      </div>
+      <div class="company-logo">
+        <img src="images/clark.png" alt="Clark University" class="company-img">
+        <span>Clark University</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="colorlib-section">
+	<span class="heading-meta">My Work</span>
+	<h2 class="colorlib-heading">How Do I Turn Ideas Into Results?</h2>
+  
+	<div class="portfolio-grid">
+  
+	  <!-- CampusPulse -->
+	  <div class="project-card">
+		<div class="project-type">AI Platform</div>
+		<div class="project-name">CampusPulse</div>
+		<div class="project-sub">Clark University AI Assistant · Production</div>
+  
+		<div class="project-desc">
+		  Built an AI-powered university assistant that transforms Clark University's
+		  complex website into a conversational experience. Leverages RAG, Qdrant,
+		  and LLaMA 3.1 to provide accurate answers, course recommendations,
+		  GPA calculations, voice interactions, and real-time analytics.
+		</div>
+  
+		<div class="project-tags">
+		  <span class="ptag">Next.js 14</span>
+		  <span class="ptag">TypeScript</span>
+		  <span class="ptag">Python</span>
+		  <span class="ptag">Qdrant</span>
+		  <span class="ptag">Groq</span>
+		  <span class="ptag">Supabase</span>
+		  <span class="ptag">RAG</span>
+		</div>
+  
+		<div class="project-links">
+		  <a href="https://campuspulse-bice.vercel.app" target="_blank" class="project-link">
+			🚀 Live Demo
+		  </a>
+		  <a href="https://github.com/BhavethraBaabu/campuspulse" target="_blank" class="project-link">
+			💻 GitHub
+		  </a>
+		</div>
+	  </div>
+  
+	  <!-- CoinPulse -->
+	  <div class="project-card">
+		<div class="project-type">FinTech</div>
+		<div class="project-name">CoinPulse</div>
+		<div class="project-sub">Real-Time Crypto Intelligence Platform</div>
+  
+		<div class="project-desc">
+		  Developed a full-stack cryptocurrency analytics platform providing
+		  real-time market monitoring, portfolio tracking, and AI-powered insights.
+		  Integrated live market data streams and interactive dashboards for
+		  actionable trading intelligence.
+		</div>
+  
+		<div class="project-tags">
+		  <span class="ptag">Next.js</span>
+		  <span class="ptag">TypeScript</span>
+		  <span class="ptag">WebSocket</span>
+		  <span class="ptag">PostgreSQL</span>
+		  <span class="ptag">Prisma</span>
+		  <span class="ptag">Vercel</span>
+		</div>
+  
+		<div class="project-links">
+		  <a href="https://cryptopulse-terminal-two.vercel.app" target="_blank" class="project-link">
+			🚀 Live Demo
+		  </a>
+		  <a href="https://github.com/BhavethraBaabu/coinpulse" target="_blank" class="project-link">
+			💻 GitHub
+		  </a>
+		</div>
+	  </div>
+  
+	  <!-- LoadBlast -->
+	  <div class="project-card">
+		<div class="project-type">DevTools</div>
+		<div class="project-name">LoadBlast</div>
+		<div class="project-sub">Browser-Based Load Testing Tool</div>
+  
+		<div class="project-desc">
+		  Built a browser-based load testing platform powered by FastAPI,
+		  asyncio, and WebSockets. Enables developers to simulate production
+		  traffic, monitor latency percentiles, and visualize performance metrics
+		  through a real-time dashboard.
+		</div>
+  
+		<div class="project-tags">
+		  <span class="ptag">FastAPI</span>
+		  <span class="ptag">asyncio</span>
+		  <span class="ptag">Next.js</span>
+		  <span class="ptag">TypeScript</span>
+		  <span class="ptag">WebSocket</span>
+		</div>
+  
+		<div class="project-links">
+		  <a href="https://your-loadblast-demo.vercel.app" target="_blank" class="project-link">
+			🚀 Live Demo
+		  </a>
+		  <a href="https://github.com/BhavethraBaabu" target="_blank" class="project-link">
+			💻 GitHub
+		  </a>
+		</div>
+	  </div>
+  
+	</div>
+  </section>
+
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="colorlib-section">
+    <span class="heading-meta">Work Experience</span>
+    <h2 class="colorlib-heading">How Have I Made An Impact?</h2>
+    <div class="timeline">
+
+      <div class="timeline-entry">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Feb 2026 – Apr 2026 · Boston, MA</div>
+        <div class="timeline-role">Software Engineer Intern</div>
+        <div class="timeline-company">SciQuel</div>
+        <ul class="timeline-bullets">
+          <li>Built full-stack features with Next.js and React for a live science publishing platform spanning 15+ disciplines, onboarding 50+ open-source contributors through a standardized component architecture.</li>
+          <li>Optimized PostgreSQL query performance via Prisma ORM, reducing article and profile metadata fetch latency by 30%.</li>
+          <li>Delivered a responsive atomic design system in TypeScript and Tailwind CSS, cutting frontend development cycle time by 30%.</li>
+          <li>Maintained CI/CD pipelines via GitHub Actions, reviewed 20+ PRs, and enforced TypeScript linting and testing standards across all deployments.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Jul 2022 – Jul 2024 · Bengaluru, India</div>
+        <div class="timeline-role">Software Engineer</div>
+        <div class="timeline-company">LTIMindtree — BNY Mellon Account</div>
+        <ul class="timeline-bullets">
+          <li>Built and maintained cloud-native AWS deployment automation across 12 MFT servers and DMZ middleware layers, achieving production-grade availability with zero unplanned downtime.</li>
+          <li>Automated MFT pipeline failure detection via custom scheduled jobs and alerting scripts, eliminating manual monitoring and enabling real-time incident response.</li>
+          <li>Deployed a full observability stack (Prometheus + Grafana) across production services, reducing MTTR and empowering on-call engineers to debug incidents autonomously.</li>
+          <li>Designed and maintained RESTful APIs for the Unitrax SaaS platform with JWT authentication, RBAC, and rate limiting for hundreds of enterprise clients.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="colorlib-section">
+    <span class="heading-meta">Education</span>
+    <h2 class="colorlib-heading">Where Did I Build My Foundation?</h2>
+
+    <div class="edu-block">
+      <div class="edu-degree">Master of Science in Computer Science (STEM)</div>
+      <div class="edu-school">Clark University · Worcester, MA · Aug 2024 – Aug 2026</div>
+      <div class="edu-detail">
+        Focus on distributed systems, AI/ML, and cloud computing. Built CampusPulse as a capstone-adjacent project — presented at Clark's Tech Innovation Challenge. Actively contributing to open-source during the program.
+      </div>
+    </div>
+
+    <div class="edu-block">
+      <div class="edu-degree">Bachelor of Technology in Information Technology</div>
+      <div class="edu-school">Anna University · Chennai, India · Aug 2018 – Jul 2022</div>
+      <div class="edu-detail">
+        Core CS fundamentals: data structures, algorithms, OS, networking, databases. Built foundational projects in Python and Java. Active participant in technical clubs and inter-college hackathons.
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="colorlib-section">
+    <span class="heading-meta">Technical Skills</span>
+    <h2 class="colorlib-heading">What I Build With</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Languages</div>
+        <div class="skill-tags">
+          <span class="stag">Python</span><span class="stag">TypeScript</span><span class="stag">JavaScript</span><span class="stag">SQL</span><span class="stag">Go</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Frontend</div>
+        <div class="skill-tags">
+          <span class="stag">Next.js</span><span class="stag">React</span><span class="stag">Tailwind CSS</span><span class="stag">RSC + Suspense</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Backend</div>
+        <div class="skill-tags">
+          <span class="stag">FastAPI</span><span class="stag">Node.js</span><span class="stag">REST APIs</span><span class="stag">Microservices</span><span class="stag">JWT / RBAC</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Databases</div>
+        <div class="skill-tags">
+          <span class="stag">PostgreSQL</span><span class="stag">MongoDB</span><span class="stag">Redis</span><span class="stag">Qdrant</span><span class="stag">Prisma</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">AI / LLM</div>
+        <div class="skill-tags">
+          <span class="stag">LangChain</span><span class="stag">RAG</span><span class="stag">OpenAI API</span><span class="stag">Groq LLaMA</span><span class="stag">Vector Search</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Cloud & DevOps</div>
+        <div class="skill-tags">
+          <span class="stag">AWS</span><span class="stag">Docker</span><span class="stag">Kubernetes</span><span class="stag">Prometheus</span><span class="stag">Grafana</span><span class="stag">Terraform</span><span class="stag">GitHub Actions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="colorlib-section">
+    <span class="heading-meta">Get In Touch</span>
+    <h2 class="colorlib-heading">Let's Start A Conversation!</h2>
+    
+    <div class="contact-grid">
+      <div>
+        <div class="contact-item">
+          <span class="contact-icon">✉</span>
+          <a href="mailto:bbaabu@clarku.edu">bbaabu@clarku.edu</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">⌖</span>
+          <p>Boston, MA</p>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">↗</span>
+          <a href="https://linkedin.com/in/bhavethrab24" target="_blank">linkedin.com/in/bhavethrab24</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">⌥</span>
+          <a href="https://github.com/BhavethraBaabu" target="_blank">github.com/BhavethraBaabu</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.875rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem;">
+          I'm actively looking for full-time software engineering roles — backend, full-stack, or AI/infra. Open to startups and mid-size companies. Happy to jump on a call.
+        </p>
+        <a href="mailto:bbaabu@clarku.edu" class="hero-btn">Send Message</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end #main -->
+
+<script>
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('#sidebar nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`#sidebar nav a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.35 });
+  sections.forEach(s => observer.observe(s));
+
+  // Smooth scroll for sidebar links
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>

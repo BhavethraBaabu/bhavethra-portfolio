@@ -1,0 +1,4 @@
+.DS_Store
+*.log
+.prepros-cache/
+node_modules/
