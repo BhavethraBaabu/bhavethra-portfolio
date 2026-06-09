@@ -1,197 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Bhavethra Baabu</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
+<link rel="stylesheet" href="style.css">
 
-body{
-background:#0a0a0a;
-color:white;
-line-height:1.6;
-}
-
-nav{
-position:fixed;
-width:100%;
-padding:20px 10%;
-background:#000;
-border-bottom:1px solid #222;
-}
-
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-padding:0 10%;
-}
-
-.hero h1{
-font-size:4rem;
-}
-
-.hero h2{
-color:#64ffda;
-margin-top:10px;
-}
-
-section{
-padding:100px 10%;
-}
-
-.card{
-background:#111;
-padding:25px;
-margin-top:20px;
-border-radius:10px;
-border:1px solid #222;
-}
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-top:20px;
-}
-
-.skill{
-padding:10px 15px;
-background:#111;
-border-radius:20px;
-border:1px solid #333;
-}
-
-a{
-color:#64ffda;
-text-decoration:none;
-}
-</style>
-
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 </head>
+
 <body>
 
-<nav>
-<h3>Bhavethra Baabu</h3>
-</nav>
+<div class="container">
 
-<section class="hero">
-<div>
-<h1>Bhavethra Baabu</h1>
-<h2>Software Engineer | AI Engineer</h2>
+    <aside class="sidebar">
 
-<p style="margin-top:20px;max-width:700px;">
-Master's student in Computer Science at Clark University.
-Experienced in Full Stack Development, AI/LLM Applications,
-Cloud Infrastructure and Distributed Systems.
-</p>
+        <img
+        src="profile.jpg"
+        class="profile"
+        alt="Bhavethra"
+        >
 
-<p style="margin-top:20px;">
-<a href="https://github.com/BhavethraBaabu">GitHub</a> |
-<a href="https://linkedin.com/in/bhavethrab24">LinkedIn</a>
-</p>
+        <h1>Bhavethra Baabu</h1>
+
+        <h3>Software Engineer</h3>
+
+        <nav>
+            <a href="#about">ABOUT</a>
+            <a href="#experience">EXPERIENCE</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#education">EDUCATION</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+
+        <div class="socials">
+            <a href="https://github.com/BhavethraBaabu">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+
+    </aside>
+
+    <main>
+
+        <section id="about">
+
+            <span>ABOUT ME</span>
+
+            <h2>WHO AM I ?</h2>
+
+            <p>
+                Hi, I'm Bhavethra — a Software Engineer and
+                AI enthusiast pursuing a Master's in Computer
+                Science at Clark University.
+            </p>
+
+            <p>
+                My experience spans cloud infrastructure,
+                backend systems, AI applications,
+                full-stack development, and distributed systems.
+            </p>
+
+            <p>
+                I enjoy building scalable products powered
+                by LLMs, Retrieval-Augmented Generation,
+                and modern cloud-native technologies.
+            </p>
+
+        </section>
+
+        <section id="experience">
+
+            <span>EXPERIENCE</span>
+
+            <h2>WHERE I'VE WORKED</h2>
+
+            <div class="card">
+
+                <h3>SciQuel</h3>
+
+                <h4>Software Engineer Intern</h4>
+
+                <p>
+                    Built full-stack features with Next.js,
+                    optimized PostgreSQL performance,
+                    developed reusable design systems,
+                    and maintained CI/CD pipelines.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>LTIMindtree</h3>
+
+                <h4>Software Engineer</h4>
+
+                <p>
+                    Built AWS deployment automation,
+                    observability systems with
+                    Prometheus and Grafana,
+                    and secure REST APIs.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section id="projects">
+
+            <span>PROJECTS</span>
+
+            <h2>FEATURED PROJECTS</h2>
+
+            <div class="card">
+
+                <h3>CampusPulse Clark</h3>
+
+                <p>
+                    AI assistant powered by
+                    RAG, Qdrant, Groq,
+                    Next.js and Supabase.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>CoinPulse</h3>
+
+                <p>
+                    Real-time cryptocurrency
+                    intelligence platform.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section id="education">
+
+            <span>EDUCATION</span>
+
+            <h2>ACADEMICS</h2>
+
+            <div class="card">
+                <h3>Clark University</h3>
+                <p>MS Computer Science</p>
+            </div>
+
+            <div class="card">
+                <h3>Anna University</h3>
+                <p>B.Tech Information Technology</p>
+            </div>
+
+        </section>
+
+        <section id="skills">
+
+            <span>SKILLS</span>
+
+            <h2>TECH STACK</h2>
+
+            <div class="skills">
+
+                <span>Python</span>
+                <span>TypeScript</span>
+                <span>React</span>
+                <span>Next.js</span>
+                <span>AWS</span>
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>PostgreSQL</span>
+                <span>LangChain</span>
+                <span>RAG</span>
+
+            </div>
+
+        </section>
+
+        <section id="contact">
+
+            <span>CONTACT</span>
+
+            <h2>LET'S CONNECT</h2>
+
+            <p>bbaabu@clarku.edu</p>
+
+        </section>
+
+    </main>
+
 </div>
-</section>
-
-<section>
-<h1>About Me</h1>
-
-<div class="card">
-Currently pursuing an MS in Computer Science at Clark University.
-Previously worked as a Software Engineer at LTIMindtree and recently
-completed a Software Engineer Internship at SciQuel.
-</div>
-</section>
-
-<section>
-<h1>Skills</h1>
-
-<div class="skills">
-<span class="skill">Python</span>
-<span class="skill">TypeScript</span>
-<span class="skill">JavaScript</span>
-<span class="skill">React</span>
-<span class="skill">Next.js</span>
-<span class="skill">FastAPI</span>
-<span class="skill">Node.js</span>
-<span class="skill">AWS</span>
-<span class="skill">Docker</span>
-<span class="skill">Kubernetes</span>
-<span class="skill">PostgreSQL</span>
-<span class="skill">MongoDB</span>
-<span class="skill">LangChain</span>
-<span class="skill">RAG</span>
-<span class="skill">OpenAI</span>
-</div>
-</section>
-
-<section>
-<h1>Experience</h1>
-
-<div class="card">
-<h3>SciQuel — Software Engineer Intern</h3>
-<p>Feb 2026 – Apr 2026</p>
-<ul>
-<li>Built full-stack features using Next.js and React.</li>
-<li>Improved PostgreSQL performance by 30%.</li>
-<li>Developed atomic design system.</li>
-<li>Maintained CI/CD pipelines.</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>LTIMindtree — Software Engineer</h3>
-<p>Jul 2022 – Jul 2024</p>
-<ul>
-<li>AWS deployment automation.</li>
-<li>Prometheus & Grafana observability stack.</li>
-<li>REST API development.</li>
-<li>JWT authentication & RBAC.</li>
-</ul>
-</div>
-</section>
-
-<section>
-<h1>Projects</h1>
-
-<div class="card">
-<h3>CampusPulse Clark</h3>
-<p>
-AI-powered university assistant using RAG, Qdrant,
-Groq and Next.js.
-</p>
-<a href="https://github.com/BhavethraBaabu/campuspulse">
-View Project
-</a>
-</div>
-
-<div class="card">
-<h3>CoinPulse</h3>
-<p>
-Real-time crypto intelligence platform built with
-Next.js and WebSockets.
-</p>
-<a href="https://github.com/BhavethraBaabu/coinpulse">
-View Project
-</a>
-</div>
-</section>
-
-<section>
-<h1>Contact</h1>
-
-<div class="card">
-<p>Email: bbaabu@clarku.edu</p>
-<p>Boston, Massachusetts</p>
-</div>
-</section>
 
 </body>
 </html>
