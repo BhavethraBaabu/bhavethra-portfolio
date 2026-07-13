@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
     --sidebar-w: 280px;
     --bg: #ffffff;
@@ -20,9 +20,9 @@
     --serif: 'Playfair Display', serif;
     --sans: 'Quicksand', sans-serif;
   }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     font-family: var(--sans);
     color: var(--text);
@@ -30,7 +30,7 @@
     display: flex;
     min-height: 100vh;
   }
-
+ 
   /* ── SIDEBAR ── */
   #sidebar {
     width: var(--sidebar-w);
@@ -46,7 +46,7 @@
     z-index: 50;
     overflow-y: auto;
   }
-
+ 
   .avatar-wrap {
     width: 130px;
     height: 130px;
@@ -57,7 +57,7 @@
     background: #dce8f5;
     flex-shrink: 0;
   }
-
+ 
   .avatar-wrap img {
     width: 100%;
     height: 100%;
@@ -65,7 +65,7 @@
     object-position: center top;
     display: block;
   }
-
+ 
   .sidebar-name {
     font-family: var(--serif);
     font-size: 1.35rem;
@@ -75,7 +75,7 @@
     margin-bottom: 0.35rem;
     line-height: 1.2;
   }
-
+ 
   .sidebar-role {
     font-size: 0.68rem;
     letter-spacing: 0.18em;
@@ -85,16 +85,16 @@
     font-weight: 600;
     margin-bottom: 2rem;
   }
-
+ 
   nav ul {
     list-style: none;
     width: 100%;
     text-align: center;
     margin-bottom: 2rem;
   }
-
+ 
   nav ul li { margin-bottom: 0.15rem; }
-
+ 
   nav ul li a {
     display: block;
     font-size: 0.7rem;
@@ -106,10 +106,10 @@
     padding: 0.4rem 0;
     transition: color 0.2s;
   }
-
+ 
   nav ul li a:hover,
   nav ul li a.active { color: var(--accent); }
-
+ 
   .social-icons {
     display: flex;
     align-items: center;
@@ -118,7 +118,7 @@
     margin-top: auto;
     padding-top: 1.5rem;
   }
-
+ 
   .social-icons a {
     display: inline-flex;
     align-items: center;
@@ -126,32 +126,32 @@
     text-decoration: none;
     transition: opacity 0.2s, transform 0.2s;
   }
-
+ 
   .social-icons a:hover {
     opacity: 0.75;
     transform: translateY(-1px);
   }
-
+ 
   .social-img {
     width: 30px;
     height: 30px;
     object-fit: contain;
     display: block;
   }
-
+ 
   /* ── MAIN ── */
   #main {
     margin-left: var(--sidebar-w);
     flex: 1;
     min-height: 100vh;
   }
-
+ 
   /* ── SECTION SHARED ── */
   .colorlib-section {
     padding: 5rem 5rem 4rem;
     border-bottom: 1px solid var(--border);
   }
-
+ 
   .heading-meta {
     display: block;
     font-size: 0.68rem;
@@ -161,7 +161,7 @@
     font-weight: 600;
     margin-bottom: 0.6rem;
   }
-
+ 
   h2.colorlib-heading {
     font-family: var(--serif);
     font-size: clamp(1.6rem, 3vw, 2.2rem);
@@ -171,7 +171,7 @@
     margin-bottom: 2.5rem;
     color: var(--text);
   }
-
+ 
   /* ── HOME / HERO ── */
   #home {
     min-height: 100vh;
@@ -181,7 +181,7 @@
     background: var(--bg);
     position: relative;
   }
-
+ 
   .hero-inner {
     display: flex;
     align-items: center;
@@ -190,17 +190,17 @@
     width: 100%;
     max-width: 1100px;
   }
-
+ 
   .hero-content {
     flex: 1;
     max-width: 620px;
   }
-
+ 
   .hero-image {
     flex-shrink: 0;
     width: clamp(260px, 30vw, 360px);
   }
-
+ 
   .hero-image img {
     width: 100%;
     aspect-ratio: 1;
@@ -210,7 +210,7 @@
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
     display: block;
   }
-
+ 
   .hero-eyebrow {
     font-size: 0.7rem;
     letter-spacing: 0.2em;
@@ -219,7 +219,7 @@
     font-weight: 600;
     margin-bottom: 1rem;
   }
-
+ 
   .hero-name {
     font-family: var(--serif);
     font-size: clamp(2.5rem, 5vw, 4rem);
@@ -228,7 +228,7 @@
     margin-bottom: 0.75rem;
     letter-spacing: 0.02em;
   }
-
+ 
   .hero-sub {
     font-size: 1rem;
     color: var(--muted);
@@ -236,7 +236,7 @@
     line-height: 1.7;
     max-width: 480px;
   }
-
+ 
   .hero-btn {
     display: inline-block;
     font-size: 0.75rem;
@@ -250,9 +250,33 @@
     border-radius: 2px;
     transition: opacity 0.2s, transform 0.2s;
   }
-
+ 
   .hero-btn:hover { opacity: 0.85; transform: translateY(-1px); }
-
+ 
+  .hero-btn-outline {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    background: transparent;
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1.5px solid var(--accent);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+  }
+ 
+  .hero-btn-outline:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
+ 
+  .hero-btn-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+ 
   /* ── ABOUT ── */
   #about .about-desc {
     font-size: 0.95rem;
@@ -260,11 +284,11 @@
     line-height: 1.9;
     max-width: 680px;
   }
-
+ 
   #about .about-desc p + p { margin-top: 1rem; }
-
+ 
   #about strong { color: var(--text); font-weight: 700; }
-
+ 
   .company-strip {
     display: flex;
     align-items: center;
@@ -272,7 +296,7 @@
     margin-top: 2rem;
     flex-wrap: nowrap;
   }
-
+ 
   .company-logo {
     font-family: var(--sans);
     font-size: 0.72rem;
@@ -289,9 +313,9 @@
     flex-shrink: 0;
     transition: border-color 0.2s, color 0.2s;
   }
-
+ 
   .company-logo:hover { border-color: var(--accent); color: var(--accent); }
-
+ 
   .company-img {
     width: 22px;
     height: 22px;
@@ -299,7 +323,7 @@
     flex-shrink: 0;
     display: block;
   }
-
+ 
   .company-logo .co-icon {
     width: 22px; height: 22px;
     border-radius: 50%;
@@ -311,16 +335,16 @@
     color: #fff;
     flex-shrink: 0;
   }
-
+ 
   /* ── PORTFOLIO ── */
   #portfolio { background: #fafafa; }
-
+ 
   .portfolio-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
-
+ 
   .project-card {
     background: var(--bg);
     border: 1px solid var(--border);
@@ -330,12 +354,12 @@
     overflow: hidden;
     transition: box-shadow 0.25s, transform 0.25s;
   }
-
+ 
   .project-card:hover {
     box-shadow: 0 8px 32px rgba(0,0,0,0.08);
     transform: translateY(-2px);
   }
-
+ 
   .project-card::after {
     content: '';
     position: absolute;
@@ -345,9 +369,9 @@
     opacity: 0;
     transition: opacity 0.25s;
   }
-
+ 
   .project-card:hover::after { opacity: 1; }
-
+ 
   .project-type {
     font-size: 0.65rem;
     letter-spacing: 0.18em;
@@ -356,35 +380,35 @@
     font-weight: 600;
     margin-bottom: 0.6rem;
   }
-
+ 
   .project-name {
     font-family: var(--serif);
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.4rem;
   }
-
+ 
   .project-sub {
     font-size: 0.78rem;
     color: var(--muted);
     margin-bottom: 1rem;
     font-weight: 500;
   }
-
+ 
   .project-desc {
     font-size: 0.85rem;
     color: var(--muted);
     line-height: 1.75;
     margin-bottom: 1.25rem;
   }
-
+ 
   .project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
     margin-bottom: 1.25rem;
   }
-
+ 
   .ptag {
     font-size: 0.65rem;
     padding: 0.2rem 0.55rem;
@@ -394,7 +418,7 @@
     font-weight: 600;
     letter-spacing: 0.05em;
   }
-
+ 
   .project-link {
     font-size: 0.72rem;
     letter-spacing: 0.1em;
@@ -405,19 +429,124 @@
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s;
   }
-
+ 
   .project-link:hover { border-color: var(--accent); }
-
+ 
+  /* ── WHY HIRE ME ── */
+  #why-hire-me { background: var(--bg); }
+ 
+  .why-intro {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.9;
+    max-width: 720px;
+    margin-bottom: 2.5rem;
+  }
+ 
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+ 
+  .why-card {
+    background: #fafafa;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.75rem 2rem;
+    position: relative;
+    transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+  }
+ 
+  .why-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+    border-color: var(--accent);
+  }
+ 
+  .why-num {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    opacity: 0.5;
+    margin-bottom: 0.5rem;
+  }
+ 
+  .why-title {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+ 
+  .why-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+ 
+  .why-tags {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    font-weight: 600;
+  }
+ 
+  /* ── IMPACT ── */
+  #impact { background: #fafafa; }
+ 
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+  }
+ 
+  .impact-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.75rem 1.5rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+ 
+  .impact-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+ 
+  .impact-number {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+    line-height: 1;
+  }
+ 
+  .impact-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+  }
+ 
+  .impact-desc {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+ 
   /* ── TESTIMONIALS ── */
   #testimonials { background: var(--bg); }
-
+ 
   .testimonial-block {
     border-left: 3px solid var(--accent);
     padding: 1.5rem 0 1.5rem 2rem;
     margin-bottom: 2.5rem;
     max-width: 700px;
   }
-
+ 
   .testimonial-block blockquote {
     font-size: 0.92rem;
     color: var(--muted);
@@ -425,7 +554,7 @@
     font-style: italic;
     margin-bottom: 0.75rem;
   }
-
+ 
   .testimonial-block cite {
     font-size: 0.75rem;
     letter-spacing: 0.1em;
@@ -433,17 +562,17 @@
     font-style: normal;
     font-weight: 600;
   }
-
+ 
   .testimonial-block cite span {
     color: var(--muted);
     font-weight: 400;
   }
-
+ 
   /* ── EXPERIENCE ── */
   #experience { background: #fafafa; }
-
+ 
   .timeline { position: relative; max-width: 720px; }
-
+ 
   .timeline::before {
     content: '';
     position: absolute;
@@ -451,10 +580,10 @@
     width: 1px;
     background: var(--border);
   }
-
+ 
   .timeline-entry { padding: 0 0 3rem 3rem; position: relative; }
   .timeline-entry:last-child { padding-bottom: 0; }
-
+ 
   .timeline-dot {
     position: absolute;
     left: 8px; top: 4px;
@@ -463,7 +592,7 @@
     border: 2px solid var(--accent);
     background: var(--bg);
   }
-
+ 
   .timeline-period {
     font-size: 0.68rem;
     letter-spacing: 0.12em;
@@ -472,28 +601,28 @@
     font-weight: 600;
     margin-bottom: 0.3rem;
   }
-
+ 
   .timeline-role {
     font-family: var(--serif);
     font-size: 1.05rem;
     font-weight: 700;
     margin-bottom: 0.2rem;
   }
-
+ 
   .timeline-company {
     font-size: 0.82rem;
     color: var(--muted);
     margin-bottom: 1rem;
     font-weight: 500;
   }
-
+ 
   .timeline-bullets {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
-
+ 
   .timeline-bullets li {
     font-size: 0.875rem;
     color: var(--muted);
@@ -501,7 +630,7 @@
     position: relative;
     line-height: 1.7;
   }
-
+ 
   .timeline-bullets li::before {
     content: '—';
     position: absolute;
@@ -509,10 +638,10 @@
     color: var(--border);
     font-size: 0.75rem;
   }
-
+ 
   /* ── EDUCATION ── */
   #education { background: var(--bg); }
-
+ 
   .edu-block {
     border: 1px solid var(--border);
     border-radius: 4px;
@@ -521,16 +650,16 @@
     max-width: 680px;
     transition: border-color 0.2s;
   }
-
+ 
   .edu-block:hover { border-color: var(--accent); }
-
+ 
   .edu-degree {
     font-family: var(--serif);
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
   }
-
+ 
   .edu-school {
     font-size: 0.82rem;
     color: var(--accent);
@@ -538,30 +667,73 @@
     margin-bottom: 0.5rem;
     letter-spacing: 0.03em;
   }
-
+ 
   .edu-detail {
     font-size: 0.82rem;
     color: var(--muted);
     line-height: 1.7;
   }
-
+ 
+  /* ── CERTIFICATIONS ── */
+  #certifications { background: #fafafa; }
+ 
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+    max-width: 800px;
+  }
+ 
+  .cert-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem 1.75rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+ 
+  .cert-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+ 
+  .cert-code {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+ 
+  .cert-name {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+ 
+  .cert-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+ 
   /* ── SKILLS ── */
-  #skills { background: #fafafa; }
-
+  #skills { background: var(--bg); }
+ 
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.25rem;
     max-width: 800px;
   }
-
+ 
   .skill-group {
-    background: var(--bg);
+    background: #fafafa;
     border: 1px solid var(--border);
     border-radius: 4px;
     padding: 1.4rem;
   }
-
+ 
   .skill-group-title {
     font-size: 0.65rem;
     letter-spacing: 0.18em;
@@ -570,9 +742,9 @@
     font-weight: 700;
     margin-bottom: 0.75rem;
   }
-
+ 
   .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-
+ 
   .stag {
     font-size: 0.72rem;
     padding: 0.25rem 0.55rem;
@@ -581,40 +753,40 @@
     border-radius: 2px;
     font-weight: 500;
   }
-
+ 
   /* ── CONTACT ── */
-  #contact { background: var(--bg); }
-
+  #contact { background: #fafafa; }
+ 
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     max-width: 720px;
   }
-
+ 
   .contact-item {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
     margin-bottom: 1.25rem;
   }
-
+ 
   .contact-icon {
     font-size: 1.2rem;
     color: var(--accent);
     flex-shrink: 0;
     margin-top: 0.1rem;
   }
-
+ 
   .contact-item a, .contact-item p {
     font-size: 0.875rem;
     color: var(--muted);
     text-decoration: none;
     transition: color 0.2s;
   }
-
+ 
   .contact-item a:hover { color: var(--accent); }
-
+ 
   .opt-note {
     display: inline-block;
     font-size: 0.68rem;
@@ -628,7 +800,7 @@
     font-weight: 600;
     margin-bottom: 1.5rem;
   }
-
+ 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     #sidebar { display: none; }
@@ -646,16 +818,17 @@
     }
     .company-strip { flex-wrap: wrap; }
     .portfolio-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; gap: 0; }
   }
-
+ 
   @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
   }
 </style>
 </head>
 <body>
-
+ 
 <!-- SIDEBAR -->
 <aside id="sidebar">
   <div class="avatar-wrap">
@@ -663,19 +836,22 @@
   </div>
   <div class="sidebar-name">Bhavethra Baabu</div>
   <div class="sidebar-role">Software Engineer</div>
-
+ 
   <nav>
     <ul>
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#why-hire-me">Why Hire Me</a></li>
+      <li><a href="#impact">Impact</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
+ 
   <div class="social-icons">
     <a href="https://linkedin.com/in/bhavethrab24" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
       <img src="images/linkedin.png" alt="LinkedIn" class="social-img">
@@ -685,10 +861,10 @@
     </a>
   </div>
 </aside>
-
+ 
 <!-- MAIN -->
 <div id="main">
-
+ 
   <!-- HOME -->
   <section id="home">
     <div class="hero-inner">
@@ -698,14 +874,17 @@
         <p class="hero-sub">
           A software engineer passionate about building reliable backend systems, cloud-native infrastructure, and AI-powered platforms that ship to production and actually scale.
         </p>
-        <a href="mailto:bbaabu@clarku.edu" class="hero-btn">Get In Touch</a>
+        <div class="hero-btn-row">
+          <a href="mailto:bbaabu@clarku.edu" class="hero-btn">Get In Touch</a>
+          <a href="Bhavethra_resume.pdf" target="_blank" rel="noopener noreferrer" class="hero-btn-outline">Resume</a>
+        </div>
       </div>
       <div class="hero-image">
         <img src="images/mee2.jpeg" alt="Bhavethra Baabu">
       </div>
     </div>
   </section>
-
+ 
   <!-- ABOUT -->
   <section id="about" class="colorlib-section">
     <span class="heading-meta">About Me</span>
@@ -726,9 +905,9 @@
 		  <p>
 			Currently pursuing my <strong>Master of Science in Computer Science at Clark University</strong>, I am actively seeking opportunities as a <strong>Software Engineer, Backend Engineer, Full-Stack Engineer, or AI Engineer</strong>, where I can contribute to building scalable software, intelligent systems, and impactful products used by people worldwide.
 		  </p>
-
+ 
     </div>
-
+ 
     <div class="company-strip">
       <div class="company-logo">
         <img src="images/ltimindtree.png" alt="LTIMindtree" class="company-img">
@@ -743,9 +922,9 @@
         <span>Clark University</span>
       </div>
     </div>
-
+ 
   </section>
-
+ 
   <!-- PORTFOLIO -->
   <section id="portfolio" class="colorlib-section">
 	<span class="heading-meta">My Work</span>
@@ -851,14 +1030,140 @@
   
 	</div>
   </section>
-
-
+ 
+  <!-- WHY HIRE ME -->
+  <section id="why-hire-me" class="colorlib-section">
+    <span class="heading-meta">Why Hire Me</span>
+    <h2 class="colorlib-heading">What Sets My Work Apart?</h2>
+ 
+    <p class="why-intro">
+      Over the past two years, I've worked on enterprise financial platforms, AI-powered applications, and cloud-native systems. I focus on writing reliable software, solving real business problems, and leaving every system better than I found it.
+    </p>
+ 
+    <div class="why-grid">
+ 
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <div class="why-title">Trusted with Enterprise Software</div>
+        <div class="why-desc">I began my career building software for enterprise financial platforms used by global banking clients. Working in production environments taught me the importance of reliability, accuracy, and maintainable engineering.</div>
+        <div class="why-tags">Enterprise Platforms • Financial Systems • Production Experience</div>
+      </div>
+ 
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <div class="why-title">Built for Backend Engineering</div>
+        <div class="why-desc">I enjoy building APIs, optimizing databases, and designing backend systems that are reliable under real workloads. I write software that's easy to maintain, easy to scale, and easy for other engineers to build on.</div>
+        <div class="why-tags">Python • FastAPI • PostgreSQL • REST APIs</div>
+      </div>
+ 
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <div class="why-title">I Focus on Outcomes, Not Just Code</div>
+        <div class="why-desc">Every feature should make the product faster, simpler, or more reliable. My work has consistently improved performance, reduced manual effort, and strengthened production systems through measurable engineering improvements.</div>
+        <div class="why-tags">Performance • Reliability • Automation</div>
+      </div>
+ 
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <div class="why-title">Comfortable Owning the Full Stack</div>
+        <div class="why-desc">I don't just contribute to one layer of the application. From frontend interfaces to backend services, databases, cloud infrastructure, and deployment pipelines, I'm comfortable delivering complete solutions.</div>
+        <div class="why-tags">Frontend → Backend → Cloud → Production</div>
+      </div>
+ 
+      <div class="why-card">
+        <div class="why-num">05</div>
+        <div class="why-title">AI with Practical Purpose</div>
+        <div class="why-desc">I build AI features that solve real user problems. From semantic search to Retrieval-Augmented Generation (RAG), I focus on creating AI systems that are useful, reliable, and production-ready.</div>
+        <div class="why-tags">LLMs • RAG • Vector Search • AI Applications</div>
+      </div>
+ 
+      <div class="why-card">
+        <div class="why-num">06</div>
+        <div class="why-title">Reliable Software Starts with Reliable Delivery</div>
+        <div class="why-desc">I automate deployments, containerize applications, and build cloud-native solutions that make releases safer and faster. Good engineering doesn't stop when the code compiles.</div>
+        <div class="why-tags">AWS • Docker • Kubernetes • GitHub Actions</div>
+      </div>
+ 
+      <div class="why-card">
+        <div class="why-num">07</div>
+        <div class="why-title">Curious Enough to Learn. Disciplined Enough to Deliver.</div>
+        <div class="why-desc">Technology evolves constantly, and I enjoy learning new tools that solve real problems. I value consistency, continuous improvement, and building software that earns users' trust.</div>
+        <div class="why-tags">Continuous Learning • Ownership • Execution</div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- IMPACT -->
+  <section id="impact" class="colorlib-section">
+    <span class="heading-meta">Impact</span>
+    <h2 class="colorlib-heading">Numbers That Speak</h2>
+ 
+    <div class="impact-grid">
+ 
+      <div class="impact-card">
+        <div class="impact-number">2+ Years</div>
+        <div class="impact-label">Professional Software Engineering</div>
+        <div class="impact-desc">Built and maintained enterprise SaaS applications, backend services, and cloud-native solutions in production environments.</div>
+      </div>
+ 
+      <div class="impact-card">
+        <div class="impact-number">40+ Clients</div>
+        <div class="impact-label">Financial Platform Support</div>
+        <div class="impact-desc">Contributed to the Unitrax investment management platform serving enterprise banking clients, including BNY and BMO.</div>
+      </div>
+ 
+      <div class="impact-card">
+        <div class="impact-number">30% Faster</div>
+        <div class="impact-label">Backend Query Performance</div>
+        <div class="impact-desc">Optimized SQL queries, indexing strategies, and backend APIs to reduce response times.</div>
+      </div>
+ 
+      <div class="impact-card">
+        <div class="impact-number">25% Lower</div>
+        <div class="impact-label">Transaction Processing Delays</div>
+        <div class="impact-desc">Improved backend workflows and business logic for faster and more reliable transaction processing.</div>
+      </div>
+ 
+      <div class="impact-card">
+        <div class="impact-number">70% Less</div>
+        <div class="impact-label">Manual Deployment Effort</div>
+        <div class="impact-desc">Automated build, test, and deployment pipelines using GitHub Actions, Docker, and CI/CD practices.</div>
+      </div>
+ 
+      <div class="impact-card">
+        <div class="impact-number">35% Faster</div>
+        <div class="impact-label">Production Issue Detection</div>
+        <div class="impact-desc">Built monitoring dashboards and alerts using Prometheus and Grafana to improve troubleshooting.</div>
+      </div>
+ 
+      <div class="impact-card">
+        <div class="impact-number">20+ KPIs</div>
+        <div class="impact-label">Operational Metrics Monitored</div>
+        <div class="impact-desc">Tracked application health, infrastructure performance, and service reliability through production dashboards.</div>
+      </div>
+ 
+      <div class="impact-card">
+        <div class="impact-number">285+ Pages</div>
+        <div class="impact-label">AI Knowledge Base Indexed</div>
+        <div class="impact-desc">Built a semantic search pipeline using embeddings and vector search for a university assistant.</div>
+      </div>
+ 
+      <div class="impact-card">
+        <div class="impact-number">1,000+ Assets</div>
+        <div class="impact-label">Real-Time Market Data</div>
+        <div class="impact-desc">Streamed live cryptocurrency data using WebSockets for real-time dashboards and analytics.</div>
+      </div>
+ 
+    </div>
+  </section>
+ 
   <!-- EXPERIENCE -->
   <section id="experience" class="colorlib-section">
     <span class="heading-meta">Work Experience</span>
-    <h2 class="colorlib-heading">A timeline of challenges, learning, and meaningful impact.</h2>
+    <h2 class="colorlib-heading">How Have I Made An Impact?</h2>
     <div class="timeline">
-
+ 
       <div class="timeline-entry">
         <div class="timeline-dot"></div>
         <div class="timeline-period">Feb 2026 – Apr 2026 · Boston, MA</div>
@@ -871,7 +1176,7 @@
           <li>Maintained CI/CD pipelines via GitHub Actions, reviewed 20+ PRs, and enforced TypeScript linting and testing standards across all deployments.</li>
         </ul>
       </div>
-
+ 
       <div class="timeline-entry">
         <div class="timeline-dot"></div>
         <div class="timeline-period">Jul 2022 – Jul 2024 · Bengaluru, India</div>
@@ -884,15 +1189,15 @@
           <li>Designed and maintained RESTful APIs for the Unitrax SaaS platform with JWT authentication, RBAC, and rate limiting for hundreds of enterprise clients.</li>
         </ul>
       </div>
-
+ 
     </div>
   </section>
-
+ 
   <!-- EDUCATION -->
   <section id="education" class="colorlib-section">
     <span class="heading-meta">Education</span>
     <h2 class="colorlib-heading">Where Did I Build My Foundation?</h2>
-
+ 
     <div class="education-details">
 		<div class="edu-block">
       <div class="edu-degree">Master of Science</div>
@@ -903,7 +1208,7 @@
       </div>
     </div>
 </div>
-
+ 
     <div class="edu-block">
       <div class="edu-degree">Bachelor of Technology in Information Technology</div>
       <div class="edu-school">Anna University · Chennai, India · Aug 2018 – Jul 2022</div>
@@ -912,7 +1217,29 @@
       </div>
     </div>
   </section>
-
+ 
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="colorlib-section">
+    <span class="heading-meta">Certifications</span>
+    <h2 class="colorlib-heading">What Credentials Back My Skills?</h2>
+ 
+    <div class="cert-grid">
+ 
+      <div class="cert-card">
+        <div class="cert-code">AI-201</div>
+        <div class="cert-name">Salesforce Certified Agentforce Specialist</div>
+        <div class="cert-desc">Covers designing and deploying autonomous AI agents on Salesforce, prompt engineering, Agentforce Builder, Data Cloud grounding, and trust/guardrail configuration for enterprise AI agents.</div>
+      </div>
+ 
+      <div class="cert-card">
+        <div class="cert-code">AZ-900</div>
+        <div class="cert-name">Microsoft Certified: Azure Fundamentals</div>
+        <div class="cert-desc">Covers core Azure cloud concepts, compute/storage/networking services, security and compliance, and pricing/SLA fundamentals for cloud solutions.</div>
+      </div>
+ 
+    </div>
+  </section>
+ 
   <!-- SKILLS -->
   <section id="skills" class="colorlib-section">
     <span class="heading-meta">Technical Skills</span>
@@ -968,7 +1295,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- CONTACT -->
   <section id="contact" class="colorlib-section">
     <span class="heading-meta">Get In Touch</span>
@@ -1001,9 +1328,9 @@
       </div>
     </div>
   </section>
-
+ 
 </div><!-- end #main -->
-
+ 
 <script>
   // Active nav link on scroll
   const sections = document.querySelectorAll('section[id]');
@@ -1018,7 +1345,7 @@
     });
   }, { threshold: 0.35 });
   sections.forEach(s => observer.observe(s));
-
+ 
   // Smooth scroll for sidebar links
   links.forEach(link => {
     link.addEventListener('click', e => {
@@ -1028,7 +1355,7 @@
     });
   });
 </script>
-
+ 
 <!-- AI assistant chat widget — backend endpoint is configured below; no secrets in this repo -->
 <script src="js/chat-widget.js" data-endpoint="https://ask-bhavethra-api.vercel.app/api/chat" defer></script>
 </body>
