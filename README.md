@@ -1,4 +1,3 @@
 # bhavethra-portfolio  
 
-
-https://bhavethraBaabu.github.io/bhavethra-portfolio/
+https://bhavethrabaabu.github.io/bhavethra-portfolio/
